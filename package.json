@@ -1,0 +1,20 @@
+{
+  "name": "food-villa-app",
+  "version": "1.0.0",
+  "description": "- Play with the `useEffect Hook` to see when it is called? (before or after render)\r - Play with the `dependency array` in useEffect Hook.\r - Play with the `developer console` by putting a `debugger` in render and `useEffect`.\r - Call an `actual API call`.\r - `Handle Error` in your `API call`.\r - Build `Shimmer UI` when data is not loaded.\r - `Render your UI` with actual API data.\r - Make `Search functionality` work.\r - Make a `Login Logout` button that toggles with a state.",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Abhishek Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
