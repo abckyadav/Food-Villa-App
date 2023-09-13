@@ -1,5 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react"; /* This is named export */
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_URL } from "../../constants";
 
@@ -64,7 +65,9 @@ const Body = () => {
       setFilteredRestaurants(filteredData);
       setErrorMessage("");
       if (filteredData?.length === 0) {
-        setErrorMessage("No matches restaurant found");
+        setErrorMessage(
+          `Sorry, we couldn't find any results for "${searchText}"`
+        );
       }
     } else {
       setErrorMessage("");
@@ -106,10 +109,12 @@ const Body = () => {
           {/* We are mapping restaurants array and passing JSON array data to RestaurantCard component as props with unique key as restaurant.data.id */}
           {filteredRestaurants.map((restaurant) => {
             return (
-              <RestaurantCard
+              <Link
+                to={"/restaurant/" + restaurant?.info?.id}
                 key={restaurant?.info?.id}
-                {...restaurant?.info}
-              />
+              >
+                <RestaurantCard {...restaurant?.info} />
+              </Link>
             );
           })}
         </div>

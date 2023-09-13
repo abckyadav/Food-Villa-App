@@ -4,7 +4,11 @@ const Footer = () => {
     <div className="footer">
       Created By
       <i className="fa-solid fa-heart"></i>
-      <a href="https://www.linkedin.com/in/abckyadav/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/abckyadav/"
+        target="_blank"
+        title="Abhishek Kumar's Linkedin Profile"
+      >
         Abhishek Kumar
       </a>
       <i className="fa-solid fa-copyright"></i>2023
